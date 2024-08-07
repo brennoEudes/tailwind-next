@@ -14,3 +14,4 @@ export default function Home() {
 
 // Anotações
 /* O TW por padrão parte das especificações para mobile! (mobile first) */
+/* Evite usar valores arbitrários fora do padrão do TW (ex: max-w-[700px]. Crie o atalho em extends no tailwind/config e aplique no código (ex: colors brenno) */
