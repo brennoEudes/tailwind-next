@@ -2,5 +2,9 @@
   "extends": [
     "@rocketseat/eslint-config/next",
     "next/core-web-vitals"
-  ]
+  ],
+  "rules": {
+    "prettier/prettier": "error"
+    // Outras regras de ESLint que você queira adicionar
+  }
 }
