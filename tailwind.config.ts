@@ -1,9 +1,9 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss'
 
 const config: Config = {
-  //content: é a única informação obrigatória para o TW! É um array c/ vários caminhos para arquivos com possíveis classes do tailwind css.
+  // content: é a única informação obrigatória para o TW! É um array c/ vários caminhos para arquivos com possíveis classes do tailwind css.
   content: [
-    "./src/**/*.tsx", // no caso, informamos q classes TW estarão em arquivos .tsx dentro da pasta src
+    './src/**/*.tsx', // no caso, informamos q classes TW estarão em arquivos .tsx dentro da pasta src
   ],
 
   // theme: é a forma que podemos ESTENDER as definições do TW, ou seja, adicionar novas classes, novas cores, novos tamanhos, etc.
@@ -11,10 +11,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        brenno: "#334322",
+        brenno: '#334322',
+      },
+      gridTemplateColumns: {
+        app: 'minmax(18rem, 20rem) 1fr', // evite usar px, use valores relativos!
       },
     },
+    plugins: [],
   },
-  plugins: [],
-};
-export default config;
+}
+export default config
