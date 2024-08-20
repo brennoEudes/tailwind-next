@@ -12,6 +12,7 @@ import {
 import { Logo } from './Logo'
 import { NavItem } from './NavItem'
 import { UsedSpaceWidget } from './UsedSpaceWidget'
+import { Profile } from './Profile'
 
 export function Sidebar() {
   return (
@@ -42,6 +43,9 @@ export function Sidebar() {
           <NavItem title="Settings" icon={Cog} />
         </nav>
         <UsedSpaceWidget />
+        <div className="h-px bg-zinc-200" />{' '}
+        {/* TW (h-px) define altura de 1px */}
+        <Profile />
       </div>
     </aside>
   )

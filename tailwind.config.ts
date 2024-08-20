@@ -15,6 +15,7 @@ const config: Config = {
       },
       gridTemplateColumns: {
         app: 'minmax(18rem, 20rem) 1fr', // evite usar px, use valores relativos!
+        profile: 'min-content 1fr min-content', // a coluna do meio é a única q cresce!
       },
     },
     plugins: [],
