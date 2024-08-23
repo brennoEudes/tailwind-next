@@ -1,6 +1,7 @@
 'use client' // trata JS no client-side. Fizemos isso pq o page.tsx é um arquivo que roda no nextJS, ou seja, no server-side.
 
 import * as Tabs from '@radix-ui/react-tabs'
+import { motion } from 'framer-motion'
 
 export interface TabItemProps {
   value: string
@@ -17,7 +18,10 @@ export function TabItem({ value, title, isSelected = false }: TabItemProps) {
     >
       <span className="">{title}</span>
       {isSelected && (
-        <div className="absolute -bottom-px left-0 right-0 h-0.5 bg-violet-700" />
+        <motion.div
+          layoutId="activeTab"
+          className="absolute -bottom-px left-0 right-0 h-0.5 bg-violet-700"
+        />
       )}
       {/* TW: p/ valores negativos, usamos o - na frente */}
     </Tabs.Trigger>
