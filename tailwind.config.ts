@@ -10,12 +10,10 @@ const config: Config = {
   // Lembrando q o TW reseta quase todos os estilos dos elementos HTML/
   theme: {
     extend: {
-      colors: {
-        brenno: '#334322',
-      },
       gridTemplateColumns: {
         app: 'minmax(18rem, 20rem) 1fr', // evite usar px, use valores relativos!
         profile: 'min-content 1fr min-content', // a coluna do meio é a única q cresce!
+        form: 'minmax(7.5rem, 17.5rem) minmax(25rem, 1fr) minmax(0, 15rem)', // define o tamanho mínimo e máximo das colunas!
       },
     },
     plugins: [],
