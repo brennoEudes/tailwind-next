@@ -15,7 +15,19 @@ const config: Config = {
         profile: 'min-content 1fr min-content', // a coluna do meio é a única q cresce!
         form: 'minmax(7.5rem, 17.5rem) minmax(25rem, 1fr) minmax(0, 15rem)', // define o tamanho mínimo e máximo das colunas!
       },
+      borderWidth: {
+        6: '6px', // tivemos q criar pois o TW não tem por padrão!
+      },
+      maxWidth: {
+        app: '700px',
+      },
+      colors: {
+        violet: {
+          25: '#fcfaff',
+        },
+      },
     },
+
     plugins: [],
   },
 }
