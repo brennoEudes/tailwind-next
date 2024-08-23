@@ -1,6 +1,7 @@
 import { SettingTabs } from '@/components/SettingsTabs'
 import * as Input from '@/components/Input'
-import { Mail, UploadCloud, User } from 'lucide-react'
+import { Mail } from 'lucide-react'
+import * as FileInput from '@/components/Form/FileInput'
 
 export default function Home() {
   return (
@@ -84,31 +85,12 @@ export default function Home() {
                 This will be displayed on your profile.
               </span>
             </label>
-            <div className="flex items-start gap-5">
-              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-violet-50">
-                <User className="h-8 w-8 text-violet-500" />
-              </div>
-              <label
-                htmlFor="photo"
-                className="hover:bg-violet-25 group flex flex-1 cursor-pointer flex-col items-center gap-3 rounded-lg border border-zinc-300 px-6 py-4 text-center text-zinc-500 shadow-sm hover:border-violet-200 hover:text-violet-500"
-              >
-                <div className="border-6 rounded-full border-zinc-50 bg-zinc-100 p-2 group-hover:border-violet-50 group-hover:bg-violet-100">
-                  {' '}
-                  {/* TW: efeito vibração borda */}
-                  <UploadCloud className="h-5 w-5 text-zinc-600 group-hover:text-violet-600" />
-                </div>
-                <div className="flex flex-col items-center gap-1">
-                  <span className="text-sm">
-                    <strong className="text-violet-700">Click to upload</strong>{' '}
-                    or drag and drop
-                  </span>
-                  <span className="text-xs">
-                    SVG, PNG, JPG or GIF (max. 800x400px)
-                  </span>
-                </div>
-              </label>
-              <input type="file" className="sr-only" id="photo"></input>{' '}
-              {/* sr-only: aplica estilos visíveis somente ao crowler. Estratégia p/ ñ estilizar diretamente o input de arquivo, q será feito pela label */}
+            <div>
+              <FileInput.Root className="flex items-start gap-5">
+                <FileInput.ImagePreview />
+                <FileInput.Trigger />
+                <FileInput.Control />
+              </FileInput.Root>
             </div>
           </div>
 
@@ -165,7 +147,12 @@ export default function Home() {
                 Share a few snippets of your work.
               </span>
             </label>
-            <div></div>
+            <div>
+              <FileInput.Root>
+                <FileInput.Trigger />
+                <FileInput.Control multiple />
+              </FileInput.Root>
+            </div>
           </div>
 
           <div className="flex items-center justify-end gap-2 pt-5">
@@ -190,6 +177,7 @@ export default function Home() {
 }
 
 // Anotações:
-// O TW por padrão parte das especificações para mobile! (mobile first)
-// Evite usar valores arbitrários fora do padrão do TW (ex: max-w-[700px]. Crie o atalho em extends no tailwind/config e aplique no código (ex: colors brenno)
-// TW possui uma ordem semântica: classes estruturais, classes de estilo (cores, fontes) e depois classes de seletores (ex: hover etc). Não esqueça de >reload p/ resetar o VSCode no final.
+// O TW por padrão parte das especificações para mobile! (mobile first);
+// Evite usar valores arbitrários fora do padrão do TW (ex: max-w-[700px]. Crie o atalho em extends no tailwind/config e aplique no código (ex: colors brenno);
+// TW possui uma ordem semântica: classes estruturais, classes de estilo (cores, fontes) e depois classes de seletores (ex: hover etc). Não esqueça de >reload p/ resetar o VSCode no final;
+// TW: podemos escrever as abreviações de estilo. Ex: bv1 = bg-violet-100;
