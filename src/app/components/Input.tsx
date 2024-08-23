@@ -1,7 +1,7 @@
 import { ComponentProps } from 'react'
 
 // PATTERN DE COMPOSIÇÃO DE COMPONENTES
-// É quando dividmos um componente em partes menores, cada uma com uma responsabilidade específica, 
+// É quando dividmos um componente em partes menores, cada uma com uma responsabilidade específica
 // a fim de trazer uma maior acessibilidade e reutilização de código.
 
 type InputPrefixProps = ComponentProps<'div'>

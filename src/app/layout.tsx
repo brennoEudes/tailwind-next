@@ -18,7 +18,9 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="antialiased">
+      {' '}
+      {/* antialiased é a classe do TW que deixa as fontes mais definidas! */}
       <body className={inter.className}>
         <div className="grid min-h-screen grid-cols-app">
           <Sidebar />
