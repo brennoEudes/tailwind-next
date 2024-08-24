@@ -21,7 +21,7 @@ export function ImagePreview() {
     )
   } else {
     return (
-      //eslint-disable-next-line @next/next/no-img-element
+      // eslint-disable-next-line @next/next/no-img-element
       <img
         src={previewURL}
         alt="preview image"
