@@ -26,9 +26,24 @@ const config: Config = {
           25: '#fcfaff',
         },
       },
+      // controlam as props de alteração das animações (ex: width, height, opacity, etc)
+      keyframes: {
+        slideDownAndFade: {
+          from: { opacity: '0', transform: 'translateY(-2px)' }, // inicia um pouco acima
+          to: { opacity: '1', transform: 'translateY(0)' }, // termina na posição original
+        },
+        // slideUpAndFade: {
+        //   from: { opacity: '1' },
+        //   to: { opacity: '0' },
+        // },
+      },
+      // controlam as animações em si (ex: easing, duration, delay, etc);
+      animation: {
+        slideDownAndFade: 'slideDownAndFade 1s cubic-bezier(0.16,1, 0.3,1)', // cubic-bezier é uma função de easing q define a velocidade em uma determinada parte da animação
+        // slideUpAndFade: 'slideUpAndFade 1s linear',
+      },
     },
-
-    plugins: [],
   },
+  plugins: [],
 }
 export default config

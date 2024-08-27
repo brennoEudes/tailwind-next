@@ -28,7 +28,7 @@ export function Select({ children, placeholder, ...props }: SelectProps) {
           side="bottom" // abra para baixo
           position="popper"
           sideOffset={8} // faz com q o select abra um pouco mais distante do topo
-          className="z-10 w-[--radix-select-trigger-width] overflow-hidden rounded-lg border border-zinc-200 bg-white shadow-sm"
+          className="animate-slideDownAndFade z-10 w-[--radix-select-trigger-width] overflow-hidden rounded-lg border border-zinc-200 bg-white shadow-sm"
           // Lembrar q o radix tb cria variáveis css: --radix-select-trigger-width. O TW entende isso e não precisar usar o "var()" q indica varieaveis no CSS.
         >
           <SelectPrimitive.Viewport>{children}</SelectPrimitive.Viewport>
