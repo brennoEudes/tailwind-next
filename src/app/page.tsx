@@ -7,6 +7,7 @@ import { Bold, Italic, Link, List, ListOrdered, Mail } from 'lucide-react'
 import { Select } from '@/components/Form/Select'
 import { SelectItem } from '@/components/Form/Select/SelectItem'
 import { Textarea } from '@/components/Form/Textarea/Textarea'
+import { Button } from '@/components/Button'
 
 export default function Home() {
   return (
@@ -22,20 +23,13 @@ export default function Home() {
             </span>
           </div>
           <div className="flex items-center gap-2">
-            <button
-              type="button"
-              className="rounded-lg border border-zinc-300 px-4 py-2 text-sm font-semibold shadow-sm hover:bg-zinc-50"
-            >
+            <Button type="button" variant="outline">
               Cancel
-            </button>
-            <button
-              type="submit"
-              form="settings"
-              className="rounded-lg bg-violet-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-violet-700"
-            >
-              {/* Form abaixo vinculado pela props form, sem a necessidade de envolver tudo na msm div */}
+            </Button>
+            <Button type="submit" variant="primary">
               Save
-            </button>
+            </Button>
+            {/* Form abaixo vinculado pela props form, sem a necessidade de envolver tudo na msm div */}
           </div>
         </div>
 
@@ -224,19 +218,12 @@ export default function Home() {
           </div>
 
           <div className="flex items-center justify-end gap-2 pt-5">
-            <button
-              type="button"
-              className="rounded-lg border border-zinc-300 px-4 py-2 text-sm font-semibold shadow-sm hover:bg-zinc-50"
-            >
+            <Button type="button" variant="outline">
               Cancel
-            </button>
-            <button
-              // type="submit" Como está dentro do form, não é necessário
-              form="settings"
-              className="rounded-lg bg-violet-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-violet-700"
-            >
-              Save
-            </button>
+            </Button>
+            {/* type="submit" Como está dentro do form, não é necessário
+             */}
+            <Button variant="primary">Save</Button>
           </div>
         </form>
       </div>
