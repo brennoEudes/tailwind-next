@@ -24,7 +24,10 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="grid min-h-screen grid-cols-app">
           <Sidebar />
-          <main className="px-8 pb-12 pt-8">{children}</main>
+          <main className="px-4 pb-12 pt-24 lg:col-start-2 lg:px-8 lg:pt-8">
+            {children}
+          </main>{' '}
+          {/* col-start-2 força o main a ocupar a 2º col do grid */}
         </div>
         {/* min-h-screen garante que o conteúdo sempre ocupe pelo menos a altura da tela */}
       </body>
