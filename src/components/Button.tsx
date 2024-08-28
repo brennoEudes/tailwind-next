@@ -15,7 +15,7 @@ const button = tv({
     // Dica: chamar a variante de "variante", pois ela muda um CONJUNTO de estilos.
     variant: {
       primary: 'bg-violet-600 text-white hover:bg-violet-700',
-      ghost: 'rounded-md px-2 hover:bg-zinc-50 shadow-none',
+      ghost: 'rounded-md px-2 hover:bg-zinc-50 shadow-none text-zinc-500',
       outline: 'border border-zinc-300 text-zinc-700 hover:bg-zinc-50',
     },
   },
@@ -28,6 +28,7 @@ const button = tv({
 
 export type ButtonProps = ComponentProps<'button'> & VariantProps<typeof button> // extendemos as props do button com as variantes p/ inseri-las nos btns
 
-export function Button({ variant, ...props }: ButtonProps) {
-  return <button {...props} className={button({ variant })} /> // classname agora invoca a fcn button
+export function Button({ variant, className, ...props }: ButtonProps) {
+  // tb recebe uma classname externa, graçar ao TW variants
+  return <button {...props} className={button({ variant, className })} /> // classname agora invoca a fcn button
 }

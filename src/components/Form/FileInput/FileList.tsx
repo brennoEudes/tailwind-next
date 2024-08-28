@@ -15,7 +15,14 @@ export function FileList() {
     <div ref={parent} className="mt-4 space-y-3">
       {/* ref parent na div principal permite as animações em todos os elementos internos */}
       {files.map((file) => {
-        return <FileItem key={file.name} name={file.name} size={file.size} />
+        return (
+          <FileItem
+            key={file.name}
+            name={file.name}
+            size={file.size}
+            state="progress"
+          />
+        )
       })}
     </div>
   )
