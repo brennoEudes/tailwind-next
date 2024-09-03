@@ -14,7 +14,7 @@ export function SettingTabs() {
         {/* type define a visibilidade da barra de rolagem */}
         <ScrollArea.Viewport className="w-full overflow-x-scroll">
           {/* define os elementos envoltos pela barra */}
-          <Tabs.List className="item-center mt-6 flex w-full gap-4 border-b border-zinc-200">
+          <Tabs.List className="item-center mt-6 flex w-full gap-4 border-b border-zinc-200 dark:border-zinc-700">
             <TabItem
               value="tab1"
               title="My Details"

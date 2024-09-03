@@ -20,7 +20,7 @@ export function FileList() {
             key={file.name}
             name={file.name}
             size={file.size}
-            state="progress"
+            state="complete" // p/ mudar estado manualmente!
           />
         )
       })}
