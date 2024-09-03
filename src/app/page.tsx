@@ -242,3 +242,4 @@ export default function Home() {
 // Evite usar valores arbitrários fora do padrão do TW (ex: max-w-[700px]. Crie o atalho em extends no tailwind/config e aplique no código (ex: colors brenno);
 // TW possui uma ordem semântica: classes estruturais, classes de estilo (cores, fontes) e depois classes de seletores (ex: hover etc). Não esqueça de >reload p/ resetar o VSCode no final;
 // TW: podemos escrever as abreviações de estilo. Ex: bv1 = bg-violet-100;
+// TW: herda a configuração do sistema (dakr/light mode) e podemos usar diretamente no código;

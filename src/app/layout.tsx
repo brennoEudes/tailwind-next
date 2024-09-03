@@ -18,8 +18,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="antialiased">
-      {' '}
+    <html lang="en" className="dark antialiased">
+      {/* "dark" segue a definição "class" em darkMode no tw.config. Pode-se criar um botão p/controlar os modos! */}{' '}
       {/* antialiased é a classe do TW que deixa as fontes mais definidas! */}
       <body className={inter.className}>
         <div className="min-h-screen lg:grid lg:grid-cols-app dark:bg-zinc-900">
